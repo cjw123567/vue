@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import {logout} from '@/api/login'
 export default {
   data() {
     return {
@@ -50,13 +51,25 @@ export default {
       this.dialogVisible = false;
     },
     exit() {
-      localStorage.clear();
-      this.dialogVisible = false;
-      this.$message({
-        message: '退出登錄成功',
-        type: "success"
-      });
-      this.$router.push("/login");
+      logout(localStorage.getItem("cjw-msm-token")).then(response => {
+        const resp = response.data
+        if(resp.flag){
+          localStorage.clear();
+          this.dialogVisible = false;
+          this.$message({
+            message: '退出登錄成功',
+            type: "success"
+          });
+          this.$router.push("/login");
+        }else{
+           this.$message({
+            message: resp.message,
+            type: "warning",
+            duration:2000
+          });
+        }
+      })
+      
     }
   }
 };

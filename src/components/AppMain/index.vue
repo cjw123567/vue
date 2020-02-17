@@ -1,21 +1,18 @@
 <template>
-    <div class="main">
-        <router-view></router-view>
-    </div>
+  <div class="main">
+    <app-link></app-link>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-export default {
-    data () {
-        return {
+import AppLink from './Link.vue'
+    export default {
+        name: 'Navbar',   
+        components:{
+            AppLink
         }
-    },
-
-    components: {},
-
-    methods: {}
-}
+        
+    }
 </script>
 
-<style scoped>
-</style>

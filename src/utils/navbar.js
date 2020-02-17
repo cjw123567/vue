@@ -42,22 +42,22 @@ const navbar = {
             "menuname" : "原始刷卡記錄查詢",
             "icon" : "icon-nav",
             "index": "1-8",
-            "url" : "RawRecord/ShowRawRecord"
+            "url" : "/member"
         },{
             "menuname" : "崗位津貼查詢",
             "icon" : "icon-nav",
             "index": "1-9",
-            "url" : "DGsubsidy/ShowDGsubsidy"
+            "url" : "/supplier"
         },{
             "menuname" : "員工職位維護",
             "icon" : "icon-nav",
             "index": "1-10",
-            "url" : "JobTitle/ShowAllJobTitle"
+            "url" : "/goods"
         },{
             "menuname" : "線別維護",
             "icon" : "icon-nav",
             "index": "1-11",
-            "url" : "defendLine"
+            "url" : "/defendLine"
         },{
             "menuname" : "未提報加班人員查詢",
             "icon" : "icon-nav",
@@ -73,7 +73,7 @@ const navbar = {
             "menuname" : "線組代碼對應的實時卡機設定",
             "icon" : "icon-nav",
             "index": "2-1",
-            "url" : "IpBinding/ShowIpBinding"
+            "url" : "/staff"
         },{
 
             "menuname" : "員工對應的實時卡機設定",
